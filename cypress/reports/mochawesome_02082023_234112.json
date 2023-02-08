@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-08T21:41:10.960Z",
+    "end": "2023-02-08T21:41:12.881Z",
+    "duration": 1921,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c9dc1a41-c202-4917-aa42-dee5beca5851",
+      "title": "",
+      "fullFile": "cypress\\tests\\getAllTodos.test.js",
+      "file": "cypress\\tests\\getAllTodos.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "69f96c99-1a00-4c77-9ca6-d1452f2ee23f",
+          "title": "get all todo endpoints",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should get a valid response",
+              "fullTitle": "get all todo endpoints should get a valid response",
+              "timedOut": null,
+              "duration": 933,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_utils.todosEndpoint.validateQueryHeader();\n_utils.todosEndpoint.expectQueryHaveStatus(200);",
+              "err": {},
+              "uuid": "5cbdb805-1a34-48f8-9cc1-47cc88bc69f2",
+              "parentUUID": "69f96c99-1a00-4c77-9ca6-d1452f2ee23f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should response length be correct",
+              "fullTitle": "get all todo endpoints should response length be correct",
+              "timedOut": null,
+              "duration": 447,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_utils.todosEndpoint.getAllQueryExpectLength(150);",
+              "err": {},
+              "uuid": "0616fa5c-b77d-4bb2-825e-ee4743d0612b",
+              "parentUUID": "69f96c99-1a00-4c77-9ca6-d1452f2ee23f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should response length not be correct",
+              "fullTitle": "get all todo endpoints should response length not be correct",
+              "timedOut": null,
+              "duration": 504,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_utils.todosEndpoint.getAllQueryExpectLength(151, true);",
+              "err": {},
+              "uuid": "e8719c8f-c496-45a4-9928-f7ace9766ff5",
+              "parentUUID": "69f96c99-1a00-4c77-9ca6-d1452f2ee23f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5cbdb805-1a34-48f8-9cc1-47cc88bc69f2",
+            "0616fa5c-b77d-4bb2-825e-ee4743d0612b",
+            "e8719c8f-c496-45a4-9928-f7ace9766ff5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1884,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-02-08T21:41:24.353Z",
+    "end": "2023-02-08T21:41:26.974Z",
+    "duration": 2621,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f7b0da75-6b9a-4c2a-8ffd-9759c1ec9722",
+      "title": "",
+      "fullFile": "cypress\\tests\\putTodo.test.js",
+      "file": "cypress\\tests\\putTodo.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f5f96ddc-32c7-406c-a830-c4320ee509bc",
+          "title": "put todo endpoints",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should check todo put header and status when successfully",
+              "fullTitle": "put todo endpoints should check todo put header and status when successfully",
+              "timedOut": null,
+              "duration": 2043,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _fixtures.mockData)(function (todo) {\n  _utils.todosEndpoint.validateMutationHeader({\n    body: {\n      completed: todo.todoForPut.completed,\n      userId: todo.todoForPut.userId\n    },\n    id: todo.todoForPost.id,\n    method: _resources.METHODS.PUT\n  });\n  _utils.todosEndpoint.expectMutationHaveStatus({\n    status: 200,\n    id: todo.todoForPost.id,\n    body: {\n      completed: todo.todoForPut.completed,\n      userId: todo.todoForPut.userId\n    },\n    method: _resources.METHODS.PUT\n  });\n});",
+              "err": {},
+              "uuid": "eafd0692-e817-4b48-b9ad-5b74aa536da7",
+              "parentUUID": "f5f96ddc-32c7-406c-a830-c4320ee509bc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should put a todo successfully",
+              "fullTitle": "put todo endpoints should put a todo successfully",
+              "timedOut": null,
+              "duration": 475,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _fixtures.mockData)(function (todo) {\n  _utils.todosEndpoint.expectSuccessfullyPut(todo.todoForPut.id, {\n    completed: todo.todoForPut.completed,\n    userId: todo.todoForPut.userId\n  });\n});",
+              "err": {
+                "message": "AssertionError: Target cannot be null or undefined.",
+                "estack": "AssertionError: Target cannot be null or undefined.\n    at getRet (http://localhost:53415/__cypress/runner/cypress_runner.js:132362:20)\n    at tryCatcher (http://localhost:53415/__cypress/runner/cypress_runner.js:9065:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:53415/__cypress/runner/cypress_runner.js:6339:29)\n    at Context.thenFn (http://localhost:53415/__cypress/runner/cypress_runner.js:132380:26)\n    at Context.then (http://localhost:53415/__cypress/runner/cypress_runner.js:132819:21)\n    at Context.<anonymous> (http://localhost:53415/__cypress/runner/cypress_runner.js:144927:21)\n    at http://localhost:53415/__cypress/runner/cypress_runner.js:144402:33\n    at tryCatcher (http://localhost:53415/__cypress/runner/cypress_runner.js:9065:23)\n    at Promise._settlePromiseFromHandler (http://localhost:53415/__cypress/runner/cypress_runner.js:7000:31)\n    at Promise._settlePromise (http://localhost:53415/__cypress/runner/cypress_runner.js:7057:18)\n    at Promise._settlePromiseCtx (http://localhost:53415/__cypress/runner/cypress_runner.js:7094:10)\n    at _drainQueueStep (http://localhost:53415/__cypress/runner/cypress_runner.js:3776:12)\n    at _drainQueue (http://localhost:53415/__cypress/runner/cypress_runner.js:3765:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:53415/__cypress/runner/cypress_runner.js:3781:5)\n    at Async.drainQueues (http://localhost:53415/__cypress/runner/cypress_runner.js:3651:14)",
+                "diff": null
+              },
+              "uuid": "a2041da7-5152-476b-be26-f0d41c7f3a6c",
+              "parentUUID": "f5f96ddc-32c7-406c-a830-c4320ee509bc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eafd0692-e817-4b48-b9ad-5b74aa536da7"
+          ],
+          "failures": [
+            "a2041da7-5152-476b-be26-f0d41c7f3a6c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2518,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

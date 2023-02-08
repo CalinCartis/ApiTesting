@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-08T21:41:19.854Z",
+    "end": "2023-02-08T21:41:21.731Z",
+    "duration": 1877,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d3c0cc6f-d2d8-4cb3-9e45-ae870d3cf5f6",
+      "title": "",
+      "fullFile": "cypress\\tests\\postTodo.test.js",
+      "file": "cypress\\tests\\postTodo.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1e5b7483-b73c-4039-95e8-76ab4ed307ed",
+          "title": "post todo endpoints",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should check todo post header and status when successfully",
+              "fullTitle": "post todo endpoints should check todo post header and status when successfully",
+              "timedOut": null,
+              "duration": 986,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _fixtures.mockData)(function (todo) {\n  _utils.todosEndpoint.validateMutationHeader({\n    body: todo.todoForPost\n  });\n  _utils.todosEndpoint.expectMutationHaveStatus({\n    status: 200,\n    body: todo.todoForPost\n  });\n});",
+              "err": {},
+              "uuid": "16be277c-f18a-4581-a871-eb656f79ea75",
+              "parentUUID": "1e5b7483-b73c-4039-95e8-76ab4ed307ed",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should post a todo successfully",
+              "fullTitle": "post todo endpoints should post a todo successfully",
+              "timedOut": null,
+              "duration": 430,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _fixtures.mockData)(function (todo) {\n  _utils.todosEndpoint.expectSuccessfullyPost(todo.todoForPost);\n});",
+              "err": {},
+              "uuid": "c2e6e12d-51d6-430d-af93-55a2b1cca3f4",
+              "parentUUID": "1e5b7483-b73c-4039-95e8-76ab4ed307ed",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should have status wrong",
+              "fullTitle": "post todo endpoints should have status wrong",
+              "timedOut": null,
+              "duration": 413,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_utils.todosEndpoint.expectMutationHaveStatus({\n  status: 400,\n  body: {}\n});",
+              "err": {},
+              "uuid": "5e1e55ac-2079-4134-b857-037e6a2c0b5a",
+              "parentUUID": "1e5b7483-b73c-4039-95e8-76ab4ed307ed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "16be277c-f18a-4581-a871-eb656f79ea75",
+            "c2e6e12d-51d6-430d-af93-55a2b1cca3f4",
+            "5e1e55ac-2079-4134-b857-037e6a2c0b5a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1829,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

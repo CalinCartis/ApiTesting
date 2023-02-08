@@ -1,0 +1,22 @@
+{
+    "todoForGetById":{
+        "id": "1"
+    },
+    "todoForPost":{
+        "todo":"do project",
+        "completed":false,
+        "userId":"5"
+    },
+    "todoForPut":{
+        "id":"1",
+        "completed":false,
+        "userId":"4"
+    },
+    "todoForPatch":{
+        "id":"1",
+        "completed":true
+    },
+    "todoForDelete":{
+        "id": "99"
+    }
+}
